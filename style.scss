@@ -1,4 +1,4 @@
-/* Nezapomeň napsat box-sizing model*/
+
 html {
   box-sizing: border-box;
 }
@@ -19,272 +19,513 @@ $ck-bright-font: #fbfef9;
 $ck-background: #eec5d9;
 
 /* Písmo stránky */
-$font-primary: "Merriweather", serif;
+$font-merriweather: "Merriweather", serif;
 $font-playfair: "Playfair Display", serif;
-$font-roboto: "Roboto", sans-serif;
 
-/*--------------------- Hlavička-------------------------- */
 
+/****************************************************
+                       Mobile
+/****************************************************/
+
+
+    .page {
+        margin: 0 auto;
+        color:#27213c;
+        font-family: $font-playifair;
+        font-size: 14px;   
+    }
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+        background-image: url(images/header.jpeg);
+        background-size: cover;
+    }
+   
+    .menu {  
+    
+    &__list {
+        padding: 0;
+         margin: 0;  
+         text-align: center;
+        list-style: none;  
+    }
+   
+  
+  
+    &__link {
+        display: block;
+        padding: 10px; 
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $ck-secondary;
+         
+    }
+    &__link:hover,
+    &__link:focus,
+    &__link:active
+    {
+        background-color: rgb(236, 112, 64, 0.3);
+        color: $ck-bright-font;   
+    }
+    }
+.hero {
+    &__text {
+        border-bottom: 1px solid $ck-secondary;
+     }
+ &__small-title{
+    display: none; 
+ }  
+ &__main-title {
+    color: $ck-primary;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $font-playfair;
+    
+ } 
+
+}
+
+.button{
+    display: none;
+    &__link {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $ck-button;
+        color: $ck-bright-font;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $font-playfair;
+        box-shadow: 9px -8px 5px -7px rgba(39,33,60,0.09);
+        &:hover,
+        &:focus {
+          background-color: $ck-primary;
+        }
+
+    }
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+
+    
+}
+.flexbox-cook {
+    
+&__image {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+   
+}
+}
+.text {
+    padding-left: 15px;
+    font-family: $font-playfair;
+ 
+&__small-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+&__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: $ck-primary;
+    text-transform: uppercase;
+    font-family: $font-playfair;
+    font-size: 16px;
+}
+
+}
+
+.background-present {
+    background-image: url(uvod/darek.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: $ck-background;
+
+}
+.background-off{
+display: flex;
+margin: 30px 0 0 30px;
+padding: 10px;
+gap: 30px;
+
+
+
+&__discount {
+    flex-shrink: 0;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: $ck-primary;
+    text-align: center;
+    font-size: 25px;
+    line-height: 25px;
+    box-shadow: 2px -1px 15px 1px rgba(39, 33, 60, 0.26);
+    color: $ck-bright-font;    
+}  
+&__title {
+    margin: 30px 0 0 0;
+
+}  
+&__information {
+    font-size: 8px; 
+}
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    margin-top: 30px;
+    padding: 10px;
+  }
+  .text__paragraph {
+    grid-column: 1;
+    grid-row: 1/3;
+    align-self: center;
+    text-align: left;
+    font-family: $font-playfair;
+  }
+  .cake1 {
+    width: 100%;
+    grid-column: 3;
+    grid-row: 2;
+    --s: 10px;
+    padding: var(--s);
+    border: calc(2 * var(--s)) solid #0000;
+    outline: 1px solid #000;
+    outline-offset: calc(-1 * var(--s));
+    background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  }
+  .cake2 {
+    width: 100%;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    justify-self: left;
+    --s: 10px;
+    padding: var(--s);
+    border: calc(2 * var(--s)) solid #0000;
+    outline: 1px solid #000;
+    outline-offset: calc(-1 * var(--s));
+    background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  }
+  .cake3 {
+    width: 100%;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    --s: 10px;
+    padding: var(--s);
+    border: calc(2 * var(--s)) solid #0000;
+    outline: 1px solid #000;
+    outline-offset: calc(-1 * var(--s));
+    background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  }
+  .cake4 {
+    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    --s: 10px;
+    padding: var(--s);
+    border: calc(2 * var(--s)) solid #0000;
+    outline: 1px solid #000;
+    outline-offset: calc(-1 * var(--s));
+    background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  }
+  .text__autor {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 10px;
+    font-style: italic;
+  }
+
+.footer {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+    background-color: $ck-secondary;
+    color: $ck-bright-font;
+    
+    &__link {
+      color: $ck-background;
+    }
+    &__link:hover,
+    &__link:focus {
+      color: $ck-primary;
+    }
+  }
+
+  /****************************************************
+                        Konec mobilu
+/****************************************************/
+
+
+
+/*--------------------Tablet-----------------*/
+@media screen and(min-width: 700px) {
+   
+      .header {
+        display: block;
+        background-image: none;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 700px;
+      
+      &__list {
+        display: flex;
+      }
+      &__link {
+        padding: 20px 30px;
+        text-transform: capitalize;
+      }
+      &__link:hover,
+      &__link:focus,
+      &__link:active {
+        border-radius: 5px;
+        background-color: $ck-button;
+        
+      }
+      }
+   .hero{
+    padding: 60px 150px;
+    background-image: url(images/header.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: $ck-background;
+    
+   &__text {
+    border-bottom: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-playfair;
+   }
+   &__main-title {
+     margin: 0;
+    font-size: 45px;
+    font-weight: 400;
+   
+  }
+  &__small-title {
+    display: inline-block;
+    margin: 10px;
+    font-size: 15px;
+    
+  }
+   }
+   .button {
+     display: block;
+    margin-top: 40px;
+   text-align: center;
+   
+   &__link {
+    padding: 15px 70px;
+    font-size: 17px;
+   }
+}
+.centering {
+    margin: 0 auto;
+  
+}
+.flexbox {
+    display: flex;
+    margin-top: 80px;
+}
+.flexbox-cook {
+    flex: 1 0 50%;  
+}
+
+.text {
+    flex-grow: 1;
+    padding-left: 30px;
+    
+    
+  }
+  .text__small-title {
+    font-size: 15px;
+  }
+
+.background-present {
+    margin-top: 80px;
+    height: 320px;
+  }
+  .background-off {
+    align-items: center;
+    padding: 60px 0;
+  
+  }
+  
+  .background-off__discount {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    line-height: 50px;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+  
+    @keyframes shake {
+      0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+      }
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+      }
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+      }
+    }
+  }
+  
+  .background-off__title {
+    font-size: 30px;
+  }
+  .background-off__information {
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .hero-grid {
+    margin-top: 80px;
+  }
+ 
+  .text__autor {
+    margin-top: 5px;
+    padding-bottom: 50px;
+  
+  }
+  .footer {
+    margin-top: 80px;
+    padding: 30px;
+  }
+  }
+
+/****************************************************
+                        Konec tabletu
+/****************************************************/
+
+@media screen and (min-width: 1024px) {
 .page {
-  margin: 0 auto;
-  font-family: $font-primary;
   font-size: 16px;
-  color: $ck-secondary;
 }
-.nav {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.menu {
   max-width: 1100px;
-}
-.nav__list {
-  display: flex;
-  list-style: none;
-}
-.nav__link {
-  padding: 20px 30px;
+
+&__link {
   font-size: 20px;
-  color: $ck-secondary;
-  text-decoration: none;
 }
-.nav__link:hover,
-.nav__link:focus {
-  border-radius: 5px;
-  background-color: $ck-button;
-  color: $ck-bright-font;
+
 }
 /*--------------------- Hlavička-------------------------- */
 
 .hero {
-  background-image: url(images/header.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-color: $ck-background;
-  padding: 60px 90px;
+  padding: 80px 250px;
 }
 
-.hero__text {
-  margin: 0 270px;
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: $font-playfair;
-}
-.hero__main-title {
-  margin: 0;
-  color: $ck-primary;
-}
+
 .hero__small-title {
-  margin: 10px;
   font-size: 20px;
-  text-shadow: 0.5px 0.1px $ck-secondary;
 }
-.button {
-  text-align: center;
-  margin-top: 40px;
-}
+
 .button__link {
-  padding: 15px 70px;
-  border-radius: 5px;
   font-size: 17px;
-  background-color: $ck-button;
-  color: $ck-bright-font;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: $font-playfair;
-  &:hover,
-  &:focus {
-    background-color: $ck-primary;
-  }
 }
 
 /*---------------------Výběr hotových dortů--------------------- */
-.centering {
-  margin: 0 auto;
-  max-width: 1100px;
-}
-.flexbox {
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-}
-.flexbox-cook__image {
-  display: block;
-  border-radius: 5px;
-}
+
 .text {
-  padding-left: 30px;
   font-size: 20px;
-  font-family: $font-playfair;
 }
 .text__small-title {
-  text-transform: uppercase;
-  margin: 0;
   font-size: 15px;
-}
-.text__title {
-  margin-top: 0;
-  text-transform: uppercase;
-  color: $ck-primary;
 }
 
 /*---------------------Sleva/dárek-------------------------- */
 .background-present {
-  margin-top: 80px;
   height: 320px;
-  background-image: url(uvod/darek.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-color: $ck-background;
-}
-.background-off {
-  display: flex;
-  align-items: center;
-  padding: 60px 0;
-  gap: 30px;
-}
-
-.background-off__discount {
-  border-radius: 100px;
-  width: 200px;
-  height: 200px;
-  background-color: $ck-primary;
-  text-align: center;
-  font-size: 50px;
-  line-height: 50px;
-  box-shadow: 2px -1px 15px 1px rgba(39, 33, 60, 0.26);
-  color: $ck-bright-font;
-
-  animation: shake 1.5s;
-  animation-iteration-count: infinite;
-
-  @keyframes shake {
-    0% {
-      transform: translate(1px, 1px) rotate(0deg);
-    }
-    10% {
-      transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    20% {
-      transform: translate(-3px, 0px) rotate(1deg);
-    }
-    30% {
-      transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-      transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-      transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    60% {
-      transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-      transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-      transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-      transform: translate(1px, 2px) rotate(0deg);
-    }
-    100% {
-      transform: translate(1px, -2px) rotate(-1deg);
-    }
-  }
 }
 
 .background-off__title {
   font-size: 40px;
-  margin-bottom: 0;
-}
-.background-off__information {
-  font-weight: 300;
-  font-size: 12px;
 }
 
 /*-----------------Hero Grid cake---------------*/
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, auto);
-  margin-top: 80px;
-}
-.text__paragraph {
-  grid-column: 1;
-  grid-row: 1/3;
-  align-self: center;
-  text-align: left;
-  font-size: 20px;
-  font-family: $font-playfair;
-}
-.cake1 {
-  grid-column: 3;
-  grid-row: 2;
-  --s: 10px;
-  padding: var(--s);
-  border: calc(2 * var(--s)) solid #0000;
-  outline: 1px solid #000;
-  outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
-}
-.cake2 {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: center;
-  justify-self: left;
-  --s: 10px;
-  padding: var(--s);
-  border: calc(2 * var(--s)) solid #0000;
-  outline: 1px solid #000;
-  outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
-}
-.cake3 {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: center;
-  align-self: center;
-  --s: 10px;
-  padding: var(--s);
-  border: calc(2 * var(--s)) solid #0000;
-  outline: 1px solid #000;
-  outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
-}
-.cake4 {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: center;
-  --s: 10px;
-  padding: var(--s);
-  border: calc(2 * var(--s)) solid #0000;
-  outline: 1px solid #000;
-  outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
-}
-.text__autor {
-  margin-top: 5px;
-  padding-bottom: 50px;
-  font-size: 13px;
-  font-style: italic;
-}
 /*------------------------Footer----------------*/
-.footer {
-  margin-top: 80px;
-  padding: 30px;
-  background-color: $ck-secondary;
-  color: $ck-bright-font;
-  text-align: center;
-  &__link {
-    color: $ck-background;
-  }
-  &__link:hover,
-  &__link:focus {
-    color: $ck-primary;
-  }
 }
+
+/****************************************************
+                        Galerie
+/****************************************************/
+
+
+/*************************Navigace********************/
+/*
+.nav__list {
+    padding: 10px 16px;
+    list-style: none;
+}
+.nav__item {
+    display:inline;
+}
+.nav__item+.nav__item:before {
+    content: "/\00a0";
+    color: $ck-primary;
+}
+.nav__link {
+    color: $ck-button;
+    font-size: 18px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
