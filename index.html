@@ -1,64 +1,14 @@
-<!DOCTYPE html>
-<html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zakázkové pečení dortů</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <!-----------------Menu hlavičky-------------------->
-    <div class="page">
-      <header class="header">
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__items"><a class="menu__link" href="#">Úvod</a></li>
-            <li class="menu__items">
-              <a class="menu__link" href="#">Galerie</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="#">Příchutě</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="#">Ceník</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="#">Objednávka</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="#">Kontakty</a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-----------------Pozadí v hlaviččce-------------------->
-        <div class="hero">
-          <div class="hero__text">
-            <p class="hero__small-title">Sladké & čerstvé</p>
-            <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
-            <p class="hero__small-title">Pro každou příležitost</p>
-          </div>
-          <div class="button">
-            <a class="button__link" href="#">Galerie</a>
-          </div>
-        </div>
-      </header>
-      <!-----------------Výběr hotových dortů-------------------->
+---
+layout: zakladni-sablona.njk
+title: Úvod
+---
       <section>
         <div class="centering">
           <div class="flexbox">
             <div class="flexbox-cook">
               <img
                 class="flexbox-cook__image"
-                src="images/vyroba.jpg"
+                src="/images/vyroba.jpg"
                 alt="fotografie cukrářky"
               />
             </div>
@@ -101,36 +51,35 @@
             <div class="text__paragraph">
               <p class="text__small-title">Široký</p>
               <h2 class="text__title">Sortiment dortů</h2>
-              <p>
-                Žádná z oslav se neobejde bez vynikajícího dortu. Vyberte si z
-                naší skvělé nabídky ať už hotových dortů nebo si sestavte dort podle Vaší
-                představy.
-              </p>
+              <p>Vyberte si z naší skvělé nabídky dortů!</p>
               <q>Nejlepší sport je kafe a dort!</q>
               <p class="text__autor">Halina Pawlowská</p>
 
-              <a class="button__link" href="#">Objednávka</a>
+              <a class="button__link" href="/objednavka/">Objednávka</a>
             </div>
 
-            <img class="cake1" src="images/dort1.jpg" alt="fotografie dortu" />
-            <img class="cake2" src="images/dort2.jpg" alt="fotografie dortu" />
-            <img class="cake3" src="images/dort3.jpg" alt="fotografie dortu" />
-            <img class="cake4" src="images/dort4.jpg" alt="fotografie dortu" />
+            <div class="cakes"></div>
+            <img
+              class="cakes__cake1 cakes--frame"
+              src="/images/dort1.jpg"
+              alt="fotografie dortu"
+            />
+            <img
+              class="cakes__cake2 cakes--frame"
+              src="/images/dort2.jpg"
+              alt="fotografie dortu"
+            />
+            <img
+              class="cakes__cake3 cakes--frame"
+              src="/images/dort3.jpg"
+              alt="fotografie dortu"
+            />
+            <img
+              class="cakes__cake4 cakes--frame"
+              src="/images/dort4.jpg"
+              alt="fotografie dortu"
+            />
           </div>
         </div>
       </section>
-      <footer>
-        <div class="footer">
-          <p>&#169; 2022 / Zakázkové pečení dortů</p>
-          <p>
-            Zdroje fotografií:
-            <a class="footer__link" href="https://unsplash.com"
-              >unsplash.com ,</a
-            >
-            <a class="footer__link" href="https://freepik.com">freepik.com</a>
-          </p>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>
+     
