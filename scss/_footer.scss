@@ -1,0 +1,33 @@
+@use "page-menu";
+@use "base";
+@use "variables";
+@use "header";
+@use "hero";
+@use "button";
+@use "flex-cook";
+@use "background-present";
+@use "hero-grid";
+@use "breadcrumbs";
+@use "nav-gallery";
+
+
+.footer {
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  background-color: $ck-secondary;
+  color: $ck-bright-font;
+
+  &__link {
+    color: $ck-background;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $ck-primary;
+  }
+}
+@media screen and(min-width: 700px) {
+  .footer {
+    padding: 30px;
+  }
+}

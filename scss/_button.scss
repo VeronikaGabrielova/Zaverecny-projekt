@@ -1,0 +1,41 @@
+@use "page-menu";
+@use "base";
+@use "variables";
+@use "header";
+@use "hero";
+@use "flex-cook";
+@use "background-present";
+@use "hero-grid";
+@use "footer";
+@use "breadcrumbs";
+@use "nav-gallery";
+
+.button {
+  display: none;
+  &__link {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $ck-button;
+    color: $ck-bright-font;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 9px -8px 5px -7px rgba(39, 33, 60, 0.09);
+    &:hover,
+    &:focus {
+      background-color: $ck-primary;
+    }
+  }
+}
+
+@media screen and(min-width: 700px) {
+  .button {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+
+    &__link {
+      padding: 15px 70px;
+      font-size: 17px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@use "page-menu";
+@use "base";
+@use "variables";
+@use "header";
+@use "hero";
+@use "button";
+@use "flex-cook";
+@use "background-present";
+@use "footer";
+@use "breadcrumbs";
+@use "nav-gallery";
+
+.hero-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    padding: 30px 10px;
+    column-gap: 10px;
+  }
+  .text__paragraph {
+    grid-column: 1;
+    grid-row: 1/-1;
+    align-self: center;
+    text-align: left;
+  }
+  .cakes--frame {
+    width: 100%;
+    --s: 4px;
+    padding: var(--s);
+    border: calc(2 * var(--s)) solid #0000;
+    outline: 0.5px solid #000;
+    outline-offset: calc(-1 * var(--s));
+    background: conic-gradient(from 90deg at 0.5px 0.5px, #0000 25%, #000 0);
+  }
+  
+  .cakes__cake1 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .cakes__cake2 {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    justify-self: left;
+  }
+  .cakes__cake3 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+  }
+  .cakes__cake4 {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+  .text__autor {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 10px;
+    font-style: italic;
+  }
+
+  @media screen and(min-width: 700px) {
+    .hero-grid {
+        padding: 80px 30px;
+      }
+    
+      .text__autor {
+        margin-top: 5px;
+        padding-bottom: 50px;
+      }
+  }
+
+  @media screen and (min-width: 1000px){
+    .hero-grid {
+        grid-template-columns: 290px 240px 240px;
+      }
+  }

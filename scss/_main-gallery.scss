@@ -1,0 +1,17 @@
+@use "page-menu";
+@use "base";
+@use "variables";
+@use "header";
+@use "footer";
+@use "breadcrumbs";
+
+
+.grid-gallery-children {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.grid-gallery-children__image {
+	width: 100%;
+}

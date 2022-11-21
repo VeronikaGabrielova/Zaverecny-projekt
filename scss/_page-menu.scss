@@ -1,0 +1,56 @@
+@use "variables";
+@use "base";
+@use "header";
+@use "hero";
+@use "button";
+@use "flex-cook";
+@use "background-present";
+@use "hero-grid";
+@use "footer";
+@use "breadcrumbs";
+@use "nav-gallery";
+
+
+.menu {
+  &__list {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $ck-secondary;
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: rgb(236, 112, 64, 0.3);
+    color: $ck-bright-font;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__list {
+      display: flex;
+    }
+    &__link {
+      padding: 15px 27px;
+      font-size: 13px;
+    }
+    &__link:hover,
+    &__link:focus,
+    &__link:active {
+      border-radius: 5px;
+      background-color: $ck-button;
+    }
+  }
+}

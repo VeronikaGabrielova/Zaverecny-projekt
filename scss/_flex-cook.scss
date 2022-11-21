@@ -1,0 +1,64 @@
+@use "page-menu";
+@use "base";
+@use "variables";
+@use "header";
+@use "hero";
+@use "button";
+@use "background-present";
+@use "hero-grid";
+@use "footer";
+@use "breadcrumbs";
+@use "nav-gallery";
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  padding: 30px 10px;
+}
+.flexbox-cook {
+  &__image {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+  }
+}
+.text {
+  padding-left: 15px;
+
+  &__small-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: $ck-primary;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+@media screen and(min-width: 700px) {
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    padding: 80px 30px;
+  }
+  .flexbox-cook {
+    flex-basis: 500px;
+  }
+
+  .text {
+    flex-basis: 500px;
+    padding-left: 30px;
+
+    &__small-title {
+      font-size: 15px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+}

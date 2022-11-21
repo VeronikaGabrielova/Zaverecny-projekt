@@ -45,7 +45,7 @@ body {
   text-transform: uppercase;
   color: #27213c;
 }
-.menu__link:hover, .menu__link:focus, .menu__link:active {
+.menu__link:hover, .menu__link:focus {
   background-color: rgba(236, 112, 64, 0.3);
   color: #fbfef9;
 }
@@ -433,21 +433,65 @@ body {
                        NOVÁ STRÁNKA 
                          GALERIE
 /****************************************************/
-/*************************Navigace********************/
-/*
 .nav__list {
-    padding: 10px 16px;
-    list-style: none;
+  list-style: none;
+}
+.nav__item + .nav__item:before {
+  content: "/ ";
+  color: #d1345b;
 }
 .nav__item {
-    display:inline;
-}
-.nav__item+.nav__item:before {
-    content: "/\00a0";
-    color: $ck-primary;
+  display: inline;
+  font-size: 13px;
 }
 .nav__link {
-    color: $ck-button;
-    font-size: 18px;
+  color: #ec7040;
+  font-size: 14px;
 }
-*//*# sourceMappingURL=style.css.map */
+.nav__link:hover, .nav__link:focus {
+  color: #27213c;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  justify-content: center;
+  padding-bottom: 30px;
+  gap: 5px;
+}
+
+.nav-gallery {
+  position: relative;
+  width: 100%;
+}
+.nav-gallery__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgba(39, 33, 60, 0.5);
+  color: #fbfef9;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.nav-gallery__link:hover, .nav-gallery__link:focus {
+  background-color: rgba(209, 52, 91, 0.5);
+}
+.nav-gallery__image {
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+/****************************************************
+                       NOVÁ STRÁNKA 
+                         GALERIE
+/****************************************************//*# sourceMappingURL=style.css.map */
