@@ -1,14 +1,5 @@
-@use "page-menu";
 @use "variables";
-@use "header";
-@use "hero";
-@use "button";
-@use "flex-cook";
-@use "background-present";
-@use "hero-grid";
-@use "footer";
-@use "breadcrumbs";
-@use "nav-gallery";
+
 
 html {
   box-sizing: border-box;
@@ -25,7 +16,7 @@ body {
 .page {
   margin: 0 auto;
   color: #27213c;
-  font-family: $font-playfair;
+  font-family: variables.$font-playfair;
   font-size: 14px;
 }
 

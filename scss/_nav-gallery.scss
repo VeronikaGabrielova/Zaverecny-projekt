@@ -1,14 +1,5 @@
-@use "page-menu";
-@use "base";
 @use "variables";
-@use "header";
-@use "hero";
-@use "button";
-@use "flex-cook";
-@use "background-present";
-@use "hero-grid";
-@use "footer";
-@use "breadcrumbs";
+
 
 
 
@@ -30,7 +21,7 @@
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       background-color: rgb(39, 33, 60, 0.5);
-      color: $ck-bright-font;
+      color: variables.$ck-bright-font;
       font-size: 16px;
       padding: 12px 24px;
       border: none;

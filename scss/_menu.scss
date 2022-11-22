@@ -1,14 +1,4 @@
 @use "variables";
-@use "base";
-@use "header";
-@use "hero";
-@use "button";
-@use "flex-cook";
-@use "background-present";
-@use "hero-grid";
-@use "footer";
-@use "breadcrumbs";
-@use "nav-gallery";
 
 
 .menu {
@@ -24,12 +14,12 @@
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
-    color: $ck-secondary;
+    color: variables.$ck-secondary;
   }
   &__link:hover,
   &__link:focus {
     background-color: rgb(236, 112, 64, 0.3);
-    color: $ck-bright-font;
+    color: variables.$ck-bright-font;
   }
 }
 
@@ -50,7 +40,7 @@
     &__link:focus,
     &__link:active {
       border-radius: 5px;
-      background-color: $ck-button;
+      background-color: variables.$ck-button;
     }
   }
 }

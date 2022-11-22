@@ -1,14 +1,5 @@
-@use "page-menu";
-@use "base";
 @use "variables";
-@use "header";
-@use "hero";
-@use "button";
-@use "flex-cook";
-@use "background-present";
-@use "hero-grid";
-@use "footer";
-@use "nav-gallery";
+
 
 
 
@@ -18,18 +9,18 @@
     }
     &__item + &__item:before {
       content: "/\00a0";
-      color: $ck-primary;
+      color: variables.$ck-primary;
     }
     &__item {
       display: inline;
       font-size: 13px;
     }
     &__link {
-      color: $ck-button;
+      color: variables.$ck-button;
       font-size: 14px;
     }
     &__link:hover,
     &__link:focus {
-      color: $ck-secondary;
+      color: variables.$ck-secondary;
     }
   }

@@ -1,21 +1,12 @@
-@use "page-menu";
-@use "base";
 @use "variables";
-@use "header";
-@use "hero";
-@use "button";
-@use "flex-cook";
-@use "hero-grid";
-@use "footer";
-@use "breadcrumbs";
-@use "nav-gallery";
+
 
 
 .background-present {
     background-image: url(/images/darek.jpeg);
     background-size: cover;
     background-position: center;
-    background-color: $ck-background;
+    background-color: variables.$ck-background;
   }
   .background-off {
     display: flex;
@@ -27,12 +18,12 @@
       border-radius: 50px;
       width: 100px;
       height: 100px;
-      background-color: $ck-primary;
+      background-color: variables.$ck-primary;
       text-align: center;
       font-size: 25px;
       line-height: 25px;
       box-shadow: 2px -1px 15px 1px rgba(39, 33, 60, 0.26);
-      color: $ck-bright-font;
+      color: variables.$ck-bright-font;
     }
     &__title {
       margin: 30px 0 0 0;

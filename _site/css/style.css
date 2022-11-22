@@ -1,37 +1,6 @@
 @charset "UTF-8";
-html {
-  box-sizing: border-box;
-}
-
-*,
-::before,
-::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-}
-
 /* Barvy stránky*/
 /* Písmo stránky */
-/****************************************************
-                       MOBIL
-/****************************************************/
-.page {
-  margin: 0 auto;
-  color: #27213c;
-  font-family: "Playfair Display", serif;
-  font-size: 14px;
-}
-
-.header {
-  display: flex;
-  flex-direction: column-reverse;
-  background-image: url(/images/header.jpeg);
-  background-size: cover;
-}
-
 .menu__list {
   padding: 0;
   margin: 0;
@@ -50,6 +19,66 @@ body {
   color: #fbfef9;
 }
 
+@media screen and (min-width: 700px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .menu__list {
+    display: flex;
+  }
+  .menu__link {
+    padding: 15px 27px;
+    font-size: 13px;
+  }
+  .menu__link:hover, .menu__link:focus, .menu__link:active {
+    border-radius: 5px;
+    background-color: #ec7040;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  margin: 0 auto;
+  color: #27213c;
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 700px) {
+  .page {
+    font-size: 17px;
+  }
+  .centering {
+    margin: 0 auto;
+  }
+}
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+  background-image: url(/images/header.jpeg);
+  background-size: cover;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    display: block;
+    background-image: none;
+  }
+}
 .hero__text {
   border-bottom: 1px solid #27213c;
 }
@@ -63,6 +92,39 @@ body {
   font-size: 18px;
 }
 
+@media screen and (min-width: 700px) {
+  .hero {
+    padding: 60px 150px;
+    background-image: url(/images/header.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: #eec5d9;
+  }
+  .hero__text {
+    border-bottom: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Playfair Display", serif;
+  }
+  .hero__main-title {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 400;
+  }
+  .hero__small-title {
+    display: inline-block;
+    margin: 10px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hero {
+    padding: 80px 250px;
+  }
+  .hero__small-title {
+    font-size: 20px;
+  }
+}
 .button {
   display: none;
 }
@@ -79,6 +141,17 @@ body {
   background-color: #d1345b;
 }
 
+@media screen and (min-width: 700px) {
+  .button {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .button__link {
+    padding: 15px 70px;
+    font-size: 17px;
+  }
+}
 .flexbox {
   display: flex;
   align-items: center;
@@ -107,6 +180,26 @@ body {
   font-size: 16px;
 }
 
+@media screen and (min-width: 700px) {
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    padding: 80px 30px;
+  }
+  .flexbox-cook {
+    flex-basis: 500px;
+  }
+  .text {
+    flex-basis: 500px;
+    padding-left: 30px;
+  }
+  .text__small-title {
+    font-size: 15px;
+  }
+  .text__title {
+    font-size: 20px;
+  }
+}
 .background-present {
   background-image: url(/images/darek.jpeg);
   background-size: cover;
@@ -138,162 +231,7 @@ body {
   font-size: 8px;
 }
 
-.hero-grid {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: repeat(3, auto);
-  padding: 30px 10px;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-}
-
-.text__paragraph {
-  grid-column: 1;
-  grid-row: 1/-1;
-  align-self: center;
-  text-align: left;
-}
-
-.cakes--frame {
-  width: 100%;
-  --s: 4px;
-  padding: var(--s);
-  border: calc(2 * var(--s)) solid rgba(0, 0, 0, 0);
-  outline: 0.5px solid #000;
-  outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 0.5px 0.5px, rgba(0, 0, 0, 0) 25%, #000 0);
-}
-
-.cakes__cake1 {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.cakes__cake2 {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: center;
-  justify-self: left;
-}
-
-.cakes__cake3 {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: center;
-  align-self: center;
-}
-
-.cakes__cake4 {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: center;
-}
-
-.text__autor {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-size: 10px;
-  font-style: italic;
-}
-
-.footer {
-  padding: 10px;
-  font-size: 12px;
-  text-align: center;
-  background-color: #27213c;
-  color: #fbfef9;
-}
-.footer__link {
-  color: #eec5d9;
-}
-.footer__link:hover, .footer__link:focus {
-  color: #d1345b;
-}
-
-/****************************************************
-                        KONEC MOBIL
-/****************************************************/
-/****************************************************
-                        TABLET
-/****************************************************/
 @media screen and (min-width: 700px) {
-  .page {
-    font-size: 17px;
-  }
-  .header {
-    display: block;
-    background-image: none;
-  }
-  .menu {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .menu__list {
-    display: flex;
-  }
-  .menu__link {
-    padding: 15px 27px;
-    font-size: 13px;
-  }
-  .menu__link:hover, .menu__link:focus, .menu__link:active {
-    border-radius: 5px;
-    background-color: #ec7040;
-  }
-  .hero {
-    padding: 60px 150px;
-    background-image: url(/images/header.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-color: #eec5d9;
-  }
-  .hero__text {
-    border-bottom: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Playfair Display", serif;
-  }
-  .hero__main-title {
-    margin: 0;
-    font-size: 45px;
-    font-weight: 400;
-  }
-  .hero__small-title {
-    display: inline-block;
-    margin: 10px;
-    font-size: 15px;
-  }
-  .button {
-    display: block;
-    margin-top: 40px;
-    text-align: center;
-  }
-  .button__link {
-    padding: 15px 70px;
-    font-size: 17px;
-  }
-  .centering {
-    margin: 0 auto;
-  }
-  .flexbox {
-    display: flex;
-    justify-content: center;
-    padding: 80px 30px;
-  }
-  .flexbox-cook {
-    flex-basis: 500px;
-  }
-  .text {
-    flex-basis: 500px;
-    padding-left: 30px;
-  }
-  .text__small-title {
-    font-size: 15px;
-  }
-  .text__title {
-    font-size: 20px;
-  }
   .background-present {
     height: 320px;
   }
@@ -389,30 +327,8 @@ body {
     font-weight: 300;
     font-size: 12px;
   }
-  .hero-grid {
-    padding: 80px 30px;
-  }
-  .text__autor {
-    margin-top: 5px;
-    padding-bottom: 50px;
-  }
-  .footer {
-    padding: 30px;
-  }
 }
-/****************************************************
-                        KONEC TABLET
-/****************************************************/
-/****************************************************
-                        PC
-/****************************************************/
 @media screen and (min-width: 1000px) {
-  .hero {
-    padding: 80px 250px;
-  }
-  .hero__small-title {
-    font-size: 20px;
-  }
   .background-present {
     height: 320px;
   }
@@ -422,17 +338,99 @@ body {
   .background-off__title {
     font-size: 40px;
   }
+}
+.hero-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  padding: 30px 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.text__paragraph {
+  grid-column: 1;
+  grid-row: 1/-1;
+  align-self: center;
+  text-align: left;
+}
+
+.cakes--frame {
+  width: 100%;
+  --s: 4px;
+  padding: var(--s);
+  border: calc(2 * var(--s)) solid rgba(0, 0, 0, 0);
+  outline: 0.5px solid #000;
+  outline-offset: calc(-1 * var(--s));
+  background: conic-gradient(from 90deg at 0.5px 0.5px, rgba(0, 0, 0, 0) 25%, #000 0);
+}
+
+.cakes__cake1 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.cakes__cake2 {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: center;
+  justify-self: left;
+}
+
+.cakes__cake3 {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.cakes__cake4 {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.text__autor {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 10px;
+  font-style: italic;
+}
+
+@media screen and (min-width: 700px) {
+  .hero-grid {
+    padding: 80px 30px;
+  }
+  .text__autor {
+    margin-top: 5px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1000px) {
   .hero-grid {
     grid-template-columns: 290px 240px 240px;
   }
 }
-/****************************************************
-                        KONEC PC
-/****************************************************/
-/****************************************************
-                       NOVÁ STRÁNKA 
-                         GALERIE
-/****************************************************/
+.footer {
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  background-color: #27213c;
+  color: #fbfef9;
+}
+.footer__link {
+  color: #eec5d9;
+}
+.footer__link:hover, .footer__link:focus {
+  color: #d1345b;
+}
+
+@media screen and (min-width: 700px) {
+  .footer {
+    padding: 30px;
+  }
+}
 .nav__list {
   list-style: none;
 }
@@ -491,7 +489,24 @@ body {
   height: auto;
 }
 
-/****************************************************
-                       NOVÁ STRÁNKA 
-                         GALERIE
-/****************************************************//*# sourceMappingURL=style.css.map */
+.grid-gallery-children {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 30px 80px 30px;
+}
+
+.grid-gallery-children__image {
+  width: 100%;
+}
+
+.gallery-header {
+  text-align: center;
+  text-transform: uppercase;
+  color: #d1345b;
+}
+
+.centering {
+  margin: 0 auto;
+  max-width: 1100px;
+}/*# sourceMappingURL=style.css.map */

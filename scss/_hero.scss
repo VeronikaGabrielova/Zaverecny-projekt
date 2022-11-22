@@ -1,24 +1,15 @@
-@use "page-menu";
-@use "base";
 @use "variables";
-@use "header";
-@use "button";
-@use "flex-cook";
-@use "background-present";
-@use "hero-grid";
-@use "footer";
-@use "breadcrumbs";
-@use "nav-gallery";
+
 
 .hero {
   &__text {
-    border-bottom: 1px solid $ck-secondary;
+    border-bottom: 1px solid variables.$ck-secondary;
   }
   &__small-title {
     display: none;
   }
   &__main-title {
-    color: $ck-primary;
+    color: variables.$ck-primary;
     text-align: center;
     text-transform: uppercase;
     font-size: 18px;
@@ -31,13 +22,13 @@
     background-image: url(/images/header.jpeg);
     background-size: cover;
     background-position: center;
-    background-color: $ck-background;
+    background-color: variables.$ck-background;
 
     &__text {
       border-bottom: none;
       text-align: center;
       text-transform: uppercase;
-      font-family: $font-playfair;
+      font-family: variables.$font-playfair;
     }
     &__main-title {
       margin: 0;
