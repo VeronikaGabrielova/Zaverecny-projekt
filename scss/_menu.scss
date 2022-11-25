@@ -1,46 +1,96 @@
 @use "variables";
 
-
 .menu {
-  &__list {
-    padding: 0;
-    margin: 0;
+  padding: 10px;
+  text-align: right;
+  background-color: rgb(238, 197, 217, 0.5);
+  &__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+  &__toggler {
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d1345b;
+    border-radius: 50%;
+    font-size: 23px;
     text-align: center;
-    list-style: none;
+    cursor: pointer;
+  }
+  &__toggler:hover {
+    background-color: #d1345b;
   }
 
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: 400;
+    color: #d1345b;
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+  &__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: rgb(238, 197, 217, 0.5);
+  }
+  &__item {
+    border-bottom: 1px solid white;
+  }
   &__link {
     display: block;
-    padding: 10px;
+    padding: 15px 20px 15px 10px;
+    text-align: left;
+    font-size: 14px;
     text-decoration: none;
+    color: #27213c;
     text-transform: uppercase;
-    color: variables.$ck-secondary;
   }
-  &__link:hover,
-  &__link:focus {
-    background-color: rgb(236, 112, 64, 0.3);
-    color: variables.$ck-bright-font;
+  &__link:hover {
+    background-color: rgb(236, 112, 64, 0.5);
+    color: #fbfef9;
   }
+}
+.menu__checkbox:checked ~ .menu__list {
+  display: block; /*specificita*/
+}
+.mobile-title {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 700px) {
   .menu {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-
+    padding: 0;
+    text-align: center;
+    background-color: #ffff;
+    &__toggler {
+      display: none;
+    }
     &__list {
-      display: flex;
+      display: inline-block;
+      background-color: #fbfef9;
+    }
+    &__item {
+      border-bottom: 0;
     }
     &__link {
-      padding: 15px 27px;
-      font-size: 13px;
+       padding: 15px 20px;
     }
-    &__link:hover,
-    &__link:focus,
-    &__link:active {
+    &__link:hover {
+      background-color: #ec7040;
+      color: #fbfef9;
       border-radius: 5px;
-      background-color: variables.$ck-button;
+     
     }
+  }
+  .mobile-title {
+    display: none;
   }
 }

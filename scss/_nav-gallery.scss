@@ -1,44 +1,59 @@
 @use "variables";
 
-
-
-
-
 .navigation {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-    justify-content: center;
-    padding-bottom: 30px;
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 200px));
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  gap: 10px;
+}
+.nav-gallery {
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  &__link {
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(39, 33, 60, 0.5);
+    color: variables.$ck-bright-font;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
   }
-  .nav-gallery {
-    position: relative;
+  &__link:hover,
+  &__link:focus {
+    background-color: rgb(209, 52, 91, 0.5);
+  }
+  &__image {
+    display: block;
+    border-radius: 5px;
     width: 100%;
-    &__link {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      background-color: rgb(39, 33, 60, 0.5);
-      color: variables.$ck-bright-font;
-      font-size: 16px;
-      padding: 12px 24px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-    }
-    &__link:hover,
-    &__link:focus {
-      background-color: rgb(209, 52, 91, 0.5);
-    }
-    &__image {
-      display: block;
-      border-radius: 5px;
-      width: 100%;
-      height: auto;
-    }
+    height: auto;
   }
+}
+
+@media screen and (min-width: 700px) {
+  .navigation {
+    margin-bottom: 80px;
+    gap: 30px;
+    grid-template-columns: repeat(4, minmax(100px, 200px));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .navigation {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+  }
+}

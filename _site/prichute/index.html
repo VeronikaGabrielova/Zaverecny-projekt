@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="cs">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Zakázkové pečení dortů | Příchutě</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
+/>
+    <link rel="stylesheet" href="/css/style.css"/>
   </head>
 
   <body>
     <!-----------------Menu hlavičky-------------------->
     <div class="page">
       <main>
-      <header class="header">
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__items"><a class="menu__link" href="/">Úvod</a></li>
-            <li class="menu__items">
-              <a class="menu__link" href="/galerie/">Galerie</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="/prichute/">Příchutě</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="/cenik/">Ceník</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="/objednavka/">Objednávka</a>
-            </li>
-            <li class="menu__items">
-              <a class="menu__link" href="/kontakty/">Kontakty</a>
-            </li>
-          </ul>
-        </nav>
+        <header class="header">
+          <nav class="menu">
 
-        <!-----------------Pozadí v hlaviččce-------------------->
-        <div class="hero">
-          <div class="hero__text">
-            <p class="hero__small-title">Sladké & čerstvé</p>
-            <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
-            <p class="hero__small-title">Pro každou příležitost</p>
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+            <div class="mobile-title">
+              <label for="menu-checkbox" class="menu__toggler">☰</label>
+              <h1 class="menu__title">Zakázkové pečení dortů</h1>
+            </div>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="/">Úvod</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="/galerie/">Galerie</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="/prichute/">Příchutě</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="/cenik/">Ceník</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="/objednavka/">Objednávka</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="/kontakty/">Kontakty</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-----------------Pozadí v hlaviččce-------------------->
+          <div class="hero">
+            <div class="hero__text">
+              <p class="hero__small-title">Sladké & čerstvé</p>
+              <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
+              <p class="hero__small-title">Pro každou příležitost</p>
+            </div>
+            <div class="button">
+              <a class="button__link button--behave" href="/galerie/">Galerie</a>
+            </div>
           </div>
-          <div class="button">
-            <a class="button__link button--behave" href="/galerie/">Galerie</a>
-          </div>
-        </div>
-      </header>
+        </header>
 
-
-
+        
 <section>
   <div class="centering">
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a class="nav__link" href="/">Úvod</a></li>
+        <li class="nav__item">
+          <a class="nav__link" href="/">Úvod</a>
+        </li>
         <li class="nav__item">Příchutě</li>
       </ul>
     </nav>
@@ -69,7 +93,7 @@
           class="card__image"
           src="/images/flavors/korpusy.jpg"
           alt="Obrázek korpusu"
-        />
+/>
 
         <h2 class="card__title">Korpusy</h2>
         <div class="card__container">
@@ -90,7 +114,7 @@
           class="card__image"
           src="/images/flavors/kremy.jpg"
           alt="Obrázek korpusu"
-        />
+/>
 
         <h2 class="card__title">Krémy</h2>
         <div class="card__container">
@@ -111,7 +135,7 @@
           class="card__image"
           src="/images/flavors/ovoce.jpg"
           alt="Obrázek korpusu"
-        />
+/>
 
         <h2 class="card__title">Ovoce</h2>
         <div class="card__container">
@@ -132,7 +156,7 @@
           class="card__image"
           src="/images/flavors/hotove.jpg"
           alt="Obrázek korpusu"
-        />
+/>
 
         <h2 class="card__title">Hotové dorty</h2>
         <div class="card__container">
@@ -149,21 +173,19 @@
   </div>
 </section>
 
-
-      
-       <footer>
-        <div class="footer">
-          <p>&#169; 2022 / Zakázkové pečení dortů</p>
-          <p>
+        <footer>
+          <div class="footer">
+            <p>&#169; 2022 / Zakázkové pečení dortů</p>
+            <p>
             Zdroje fotografií:
             <a class="footer__link" href="https://unsplash.com"
               >unsplash.com ,</a
             >
-            <a class="footer__link" href="https://freepik.com">freepik.com</a>
-          </p>
-        </div>
-      </footer>
-    </main>
+              <a class="footer__link" href="https://freepik.com">freepik.com</a>
+            </p>
+          </div>
+        </footer>
+      </main>
     </div>
   </body>
 </html>

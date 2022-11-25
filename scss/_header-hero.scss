@@ -1,0 +1,28 @@
+@use "variables";
+
+@media screen and (min-width: 700px) {
+.hero {
+  padding: 60px 150px;
+  background-image: url(/images/header.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-color: variables.$ck-background;
+
+  &__text {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: variables.$font-playfair;
+  }
+  &__main-title {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 400;
+    color: variables.$ck-primary;
+  }
+}
+}
+@media screen and (max-width: 699px) {
+  .hero {
+    display: none;
+  }
+}

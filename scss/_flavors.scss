@@ -3,15 +3,15 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  padding: 20px;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   max-width: 250px;
-  text-align: center;
 
-  margin-bottom: 80px;
+  text-align: center;
 
   &__container {
     padding: 2px 20px;
@@ -30,8 +30,27 @@
     padding: 10px;
     margin: 0;
     color: #d1345b;
-    font-size: 20px;
+    font-size: 15px;
     text-transform: uppercase;
     border-bottom: 0.5px solid rgb(39, 33, 60, 0.5);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .flavors {
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .flavors {
+    padding: 0;
+    gap: 40px;
+  }
+  .card {
+    &__title {
+      font-size: 20px;
+    }
   }
 }

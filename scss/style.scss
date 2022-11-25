@@ -1,8 +1,7 @@
 @use "menu";
 @use "base";
 @use "variables";
-@use "header";
-@use "hero";
+@use "header-hero";
 @use "button";
 @use "flex-cook";
 @use "background-present";
@@ -13,4 +12,5 @@
 @use "main-gallery";
 @use "flavors";
 @use "table";
-
+@use "form";
+@use "contact"
