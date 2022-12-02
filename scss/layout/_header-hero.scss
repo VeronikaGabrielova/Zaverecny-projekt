@@ -1,8 +1,15 @@
-@use "variables";
+@use "../abstracts/variables";
+
+
+ .hero {
+    display: none;
+  }
+
 
 @media screen and (min-width: 700px) {
 .hero {
-  padding: 60px 150px;
+  display: block;
+  padding: 120px 150px;
   background-image: url(/images/header.jpeg);
   background-size: cover;
   background-position: center;
@@ -21,8 +28,6 @@
   }
 }
 }
-@media screen and (max-width: 699px) {
-  .hero {
-    display: none;
-  }
-}
+
+ 
+

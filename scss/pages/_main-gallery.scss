@@ -1,4 +1,4 @@
-@use "variables";
+@use "../abstracts/variables";
 
 .grid-gallery {
   display: grid;
@@ -13,6 +13,8 @@
 }
 .gallery-header {
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   color: variables.$ck-primary;
 }

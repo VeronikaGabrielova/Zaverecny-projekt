@@ -2,9 +2,14 @@
 /* Barvy stránky*/
 /* Písmo stránky */
 .menu {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
   padding: 10px;
   text-align: right;
-  background-color: rgba(238, 197, 217, 0.5);
+  background-color: rgba(238, 197, 217, 0.9);
 }
 .menu__checkbox {
   position: absolute;
@@ -67,6 +72,16 @@
   padding-left: 10px;
 }
 
+.menu__item--active {
+  background-color: rgba(236, 112, 64, 0.5);
+  border-radius: 5px;
+  color: #fbfef9;
+}
+
+.menu__link--active {
+  color: #fbfef9;
+}
+
 @media screen and (min-width: 700px) {
   .menu {
     padding: 0;
@@ -93,6 +108,14 @@
   }
   .mobile-title {
     display: none;
+  }
+  .menu__item--active {
+    background-color: rgb(236, 112, 64);
+    border-radius: 5px;
+    color: #fbfef9;
+  }
+  .menu__link--active {
+    color: #fbfef9;
   }
 }
 html {
@@ -124,9 +147,14 @@ body {
     margin: 0 auto;
   }
 }
+.hero {
+  display: none;
+}
+
 @media screen and (min-width: 700px) {
   .hero {
-    padding: 60px 150px;
+    display: block;
+    padding: 120px 150px;
     background-image: url(/images/header.jpeg);
     background-size: cover;
     background-position: center;
@@ -142,11 +170,6 @@ body {
     font-size: 45px;
     font-weight: 400;
     color: #d1345b;
-  }
-}
-@media screen and (max-width: 699px) {
-  .hero {
-    display: none;
   }
 }
 .button {
@@ -179,7 +202,7 @@ body {
 .flexbox {
   display: flex;
   align-items: center;
-  padding: 30px 10px;
+  padding: 90px 10px 30px 10px;
 }
 
 .flexbox-cook__image {
@@ -456,8 +479,12 @@ body {
     margin-top: 80px;
   }
 }
+.nav {
+  margin-top: 90px;
+}
 .nav__list {
   list-style: none;
+  padding-left: 20px;
 }
 .nav__item + .nav__item:before {
   content: "/ ";
@@ -475,6 +502,14 @@ body {
   color: #27213c;
 }
 
+@media screen and (min-width: 700px) {
+  .nav {
+    margin-top: 30px;
+  }
+  .nav__list {
+    padding-left: 25px;
+  }
+}
 .navigation {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 200px));
@@ -545,6 +580,8 @@ body {
 
 .gallery-header {
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   color: #d1345b;
 }
@@ -554,60 +591,10 @@ body {
   max-width: 1100px;
 }
 
-.flavors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  max-width: 250px;
-  text-align: center;
-}
-.card__container {
-  padding: 2px 20px;
-}
-.card__image {
-  width: 100%;
-  display: block;
-  border-radius: 5px 5px 0 0;
-}
-.card__list {
-  padding: 0;
-  list-style: none;
-}
-.card__title {
-  padding: 10px;
-  margin: 0;
-  color: #d1345b;
-  font-size: 15px;
-  text-transform: uppercase;
-  border-bottom: 0.5px solid rgba(39, 33, 60, 0.5);
-}
-
-@media screen and (min-width: 700px) {
-  .flavors {
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .flavors {
-    padding: 0;
-    gap: 40px;
-  }
-  .card__title {
-    font-size: 20px;
-  }
-}
 .flexbox-price {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 80px;
 }
 
@@ -653,6 +640,7 @@ body {
 @media screen and (max-width: 700px) {
   .table-box {
     max-width: 339px;
+    margin-top: 60px;
   }
   .button--price-list {
     display: block;
@@ -743,7 +731,7 @@ body {
   .form {
     flex-wrap: wrap;
     max-width: 350px;
-    margin-top: 30px;
+    margin-top: 90px;
     margin-bottom: 30px;
     padding-left: 5px;
     padding-right: 5px;
@@ -801,5 +789,58 @@ body {
   }
   .contact__list {
     text-align: left;
+  }
+}
+.flavors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 250px;
+  text-align: center;
+}
+.card__container {
+  padding: 2px 20px;
+}
+.card__image {
+  width: 100%;
+  display: block;
+  border-radius: 5px 5px 0 0;
+}
+.card__list {
+  padding: 0;
+  list-style: none;
+}
+.card__title {
+  padding: 10px;
+  margin: 0;
+  color: #d1345b;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid rgba(39, 33, 60, 0.5);
+}
+
+@media screen and (min-width: 700px) {
+  .flavors {
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .flavors {
+    padding: 0;
+    gap: 40px;
+  }
+  .card__title {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
