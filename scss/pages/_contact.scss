@@ -28,6 +28,7 @@
 }
 .contact-map {
   &__image {
+    z-index: 0;
     width: 400px;
     height: 280px;
     width: 100%;
@@ -44,7 +45,7 @@
   .contact-flex {
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 30px 10px 10px 10px;
   }
   .contact-map__image {
     min-width: 300px;

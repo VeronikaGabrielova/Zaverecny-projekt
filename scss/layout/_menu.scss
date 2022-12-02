@@ -77,6 +77,9 @@
 .menu__link--active {
   color: #fbfef9;
 }
+.menu__title-link {
+  text-decoration: none;
+}
 
 @media screen and (min-width: 700px) {
   .menu {
