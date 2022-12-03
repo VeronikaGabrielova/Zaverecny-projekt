@@ -28,6 +28,8 @@
 }
 .contact-map {
   &__image {
+    position: relative;
+    z-index: -1;
     width: 400px;
     height: 280px;
     width: 100%;
