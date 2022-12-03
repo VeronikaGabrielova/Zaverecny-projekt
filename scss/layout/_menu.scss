@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 
 .menu {
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   right: 0;
   left: 0;
@@ -60,9 +60,7 @@
     color: #fbfef9;
   }
 }
-.menu__checkbox:checked ~ .menu__list {
-  display: block; /*specificita*/
-}
+
 .mobile-title {
   display: flex;
   flex-direction: row-reverse;
@@ -80,10 +78,14 @@
 .menu__title-link {
   text-decoration: none;
 }
+@media screen and (max-width: 699px){
+  .menu__checkbox:checked ~ .menu__list {
+    display: block; /*specificita*/
+  }
+}
 
 @media screen and (min-width: 700px) {
   .menu {
-    z-index: 10;
     padding: 0;
     text-align: center;
     background-color: #ffff;
@@ -91,7 +93,6 @@
       display: none;
     }
     &__list {
-      z-index: 10;
       display: inline-block;
       background-color: #fbfef9;
     }

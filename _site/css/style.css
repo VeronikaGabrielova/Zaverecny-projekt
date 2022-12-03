@@ -2,7 +2,7 @@
 /* Barvy stránky*/
 /* Písmo stránky */
 .menu {
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   right: 0;
   left: 0;
@@ -61,10 +61,6 @@
   color: #fbfef9;
 }
 
-.menu__checkbox:checked ~ .menu__list {
-  display: block; /*specificita*/
-}
-
 .mobile-title {
   display: flex;
   flex-direction: row-reverse;
@@ -86,6 +82,11 @@
   text-decoration: none;
 }
 
+@media screen and (max-width: 699px) {
+  .menu__checkbox:checked ~ .menu__list {
+    display: block; /*specificita*/
+  }
+}
 @media screen and (min-width: 700px) {
   .menu {
     padding: 0;
