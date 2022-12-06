@@ -1,33 +1,49 @@
 @use "../abstracts/variables";
 
-
- .hero {
-    display: none;
-  }
-
-
-@media screen and (min-width: 700px) {
+.header-link {
+  text-decoration: none;
+}
 .hero {
-  display: block;
-  padding: 120px 150px;
+  height: 270px;
   background-image: url(/images/header.jpeg);
   background-size: cover;
   background-position: center;
   background-color: variables.$ck-background;
 
   &__text {
+    padding: 40px 5px 10px 5px;
     text-align: center;
     text-transform: uppercase;
     font-family: variables.$font-playfair;
   }
+  &__small-title {
+    color: variables.$ck-secondary;
+  }
   &__main-title {
     margin: 0;
-    font-size: 45px;
-    font-weight: 400;
     color: variables.$ck-primary;
+    font-weight: 400;
   }
 }
+
+@media screen and (min-width: 700px) {
+  .hero {
+    height: auto;
+    margin-top: 0;
+    padding: 120px 180px 90px 180px;
+
+    &__text {
+      padding: 0;
+    }
+    &__main-title {
+      font-size: 45px;
+    }
+  }
+  @media screen and (min-width: 1000px){
+    .hero{
+      &__main-title {
+        font-size: 60px;
+      }
+    }
+  }
 }
-
- 
-

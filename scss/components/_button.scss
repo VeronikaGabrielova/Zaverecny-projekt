@@ -2,9 +2,10 @@
 
 
 .button {
-  display: none;
+text-align: center;
+margin-top: 5px;
   &__link {
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 5px;
     background-color: variables.$ck-button;
     color: variables.$ck-bright-font;
@@ -20,10 +21,7 @@
 
 @media screen and(min-width: 700px) {
   .button {
-    display: block;
     margin-top: 55px;
-    text-align: center;
-
     &__link {
       padding: 15px 70px;
       font-size: 17px;

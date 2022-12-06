@@ -22,10 +22,10 @@
           <nav class="menu">
 
             <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-            <div class="mobile-title">
+            <div class="toggler">
               <label for="menu-checkbox" class="menu__toggler">☰</label>
 
-              <a class="menu__title-link" href="/"> <h1 class="menu__title">Zakázkové pečení dortů</h1></a>
+              
             </div>
             <ul class="menu__list">
               <li class="menu__item ">
@@ -66,11 +66,13 @@
 
           <!-----------------Pozadí v hlaviččce-------------------->
           <div class="hero">
+            <a class="header-link" href="/">
             <div class="hero__text">
               <p class="hero__small-title">Sladké & čerstvé</p>
               <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
               <p class="hero__small-title">Pro každou příležitost</p>
             </div>
+            </a>
             <div class="button">
               <a class="button__link button--behave" href="/galerie/">Galerie</a>
             </div>
@@ -79,92 +81,85 @@
 
         
 <section>
-    <div class="centering">
+  <div class="centering">
+    <div class="flexbox-price">
+      <div class="photo-price">
+        <img class="photo-price__image" src="/images/cenik.jpg" alt="" />
+      </div>
 
-<div class="flexbox-price">
-<div class="photo-price">
-<img class="photo-price__image" src="/images/cenik.jpg" alt="">
-</div>
+      <div class="table-box">
+        <div class="table">
+          <table>
+            <thead>
+              <h2 class="table__title">Ceník</h2>
 
-
-   
-
-
- <div class="table-box">
-
-  <div class="table">
-<table>
-    <thead>
-        <h2 class="table__title">Ceník</h2>
-       
-        <tr>
-            
-            <th> <h2 class="table__left table--font-size">Druh dortu</h2></th>
-            <th><h2 class="table__right table--font-size">Cena</h2></th>
-        
-        </tr>
-        
-    </thead>
-    <div class="table__body">
-    <tbody>
-        <div class="table__list">
-        <tr>
-            <td class="table__left">Jednopatrový&nbsp;</td>
-            <td class="table__right">od 1300,-</td>
-        </tr>
-        <tr>
-            <td class="table__left">Dvoupatrový</td>
-            <td class="table__right">od 2600,-&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="table__left">Vícepatrový&nbsp;</td>
-            <td class="table__right">od 5000,-&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="table__left">Potahovaný/polévaný&nbsp;</td>
-            <td class="table__right">130,-/porce&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="table__left">Nepotahovaný<br></td>
-            <td class="table__right">120,-/porce&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="table__left">Pavlova&nbsp;</td>
-            <td class="table__right">800,-&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="table__left">Míša dort</td>
-            <td class="table__right">850,-&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="table__left">Cheesecake&nbsp;</td>
-            <td class="table__right">&nbsp;900,-</td>
-        </tr>
-        <tr>
-            <td class="table__left">Sachr&nbsp;</td>
-            <td class="table__right">1100,-&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="table__left">Medovník</td>
-            <td class="table__right">1000,-</td>
-        </tr>
-        
+              <tr>
+                <th>
+                  <h2 class="table__left table--font-size">Druh dortu</h2>
+                </th>
+                <th><h2 class="table__right table--font-size">Cena</h2></th>
+              </tr>
+            </thead>
+            <div class="table__body">
+              <tbody>
+                <div class="table__list">
+                  <tr>
+                    <td class="table__left">Jednopatrový&nbsp;</td>
+                    <td class="table__right">od 1300,-</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Dvoupatrový</td>
+                    <td class="table__right">od 2600,-&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Vícepatrový&nbsp;</td>
+                    <td class="table__right">od 5000,-&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Potahovaný/polévaný&nbsp;</td>
+                    <td class="table__right">130,-/porce&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Nepotahovaný<br /></td>
+                    <td class="table__right">120,-/porce&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Pavlova&nbsp;</td>
+                    <td class="table__right">800,-&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Míša dort</td>
+                    <td class="table__right">850,-&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Cheesecake&nbsp;</td>
+                    <td class="table__right">&nbsp;900,-</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Sachr&nbsp;</td>
+                    <td class="table__right">1100,-&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Medovník</td>
+                    <td class="table__right">1000,-</td>
+                  </tr>
+                </div>
+              </tbody>
+            </div>
+          </table>
+          <div class="button button--price-list">
+            <a class="button__link" href="/objednavka/">Objednávka</a>
+          </div>
+        </div>
+      </div>
     </div>
-    </tbody>
-</div>
-</table>
-<div class="button button--price-list">
-    <a class="button__link" href="/objednavka/">Objednávka</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+  </div>
 </section>
+
 
         <footer>
           <div class="footer">
-            <p>&#169; 2022 / Zakázkové pečení dortů</p>
+            <p>&#169; 2022 / Veronika Gabrielová</p>
             <p>
             Zdroje fotografií:
             <a class="footer__link" href="https://unsplash.com"

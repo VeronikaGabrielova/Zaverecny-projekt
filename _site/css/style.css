@@ -7,19 +7,17 @@
   right: 0;
   left: 0;
   top: 0;
-  padding: 10px;
   text-align: right;
-  background-color: rgba(238, 197, 217, 0.9);
 }
 .menu__checkbox {
   position: absolute;
   left: -9999px;
 }
 .menu__toggler {
-  margin-bottom: 5px;
+  margin: 10px 10px 5px 0;
   width: 40px;
   height: 40px;
-  border: 1px solid #d1345b;
+  background-color: rgba(236, 112, 64, 0.7);
   border-radius: 50%;
   font-size: 23px;
   text-align: center;
@@ -42,7 +40,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: rgba(238, 197, 217, 0.5);
+  background-color: rgb(238, 197, 217);
 }
 .menu__item {
   border-bottom: 1px solid white;
@@ -61,11 +59,9 @@
   color: #fbfef9;
 }
 
-.mobile-title {
+.toggler {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  padding-left: 10px;
+  justify-content: end;
 }
 
 .menu__item--active {
@@ -111,9 +107,6 @@
     color: #fbfef9;
     border-radius: 5px;
   }
-  .mobile-title {
-    display: none;
-  }
   .menu__item--active {
     background-color: rgb(236, 112, 64);
     border-radius: 5px;
@@ -152,36 +145,56 @@ body {
     margin: 0 auto;
   }
 }
+.header-link {
+  text-decoration: none;
+}
+
 .hero {
-  display: none;
+  height: 270px;
+  background-image: url(/images/header.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-color: #eec5d9;
+}
+.hero__text {
+  padding: 40px 5px 10px 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+}
+.hero__small-title {
+  color: #27213c;
+}
+.hero__main-title {
+  margin: 0;
+  color: #d1345b;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 700px) {
   .hero {
-    display: block;
-    padding: 120px 150px;
-    background-image: url(/images/header.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-color: #eec5d9;
+    height: auto;
+    margin-top: 0;
+    padding: 120px 180px 90px 180px;
   }
   .hero__text {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Playfair Display", serif;
+    padding: 0;
   }
   .hero__main-title {
-    margin: 0;
     font-size: 45px;
-    font-weight: 400;
-    color: #d1345b;
+  }
+}
+@media screen and (min-width: 700px) and (min-width: 1000px) {
+  .hero__main-title {
+    font-size: 60px;
   }
 }
 .button {
-  display: none;
+  text-align: center;
+  margin-top: 5px;
 }
 .button__link {
-  padding: 10px;
+  padding: 10px 30px;
   border-radius: 5px;
   background-color: #ec7040;
   color: #fbfef9;
@@ -195,9 +208,7 @@ body {
 
 @media screen and (min-width: 700px) {
   .button {
-    display: block;
     margin-top: 55px;
-    text-align: center;
   }
   .button__link {
     padding: 15px 70px;
@@ -207,7 +218,7 @@ body {
 .flexbox {
   display: flex;
   align-items: center;
-  padding: 90px 10px 30px 10px;
+  padding: 50px 10px 30px 10px;
 }
 
 .flexbox-cook__image {
@@ -485,7 +496,7 @@ body {
   }
 }
 .nav {
-  margin-top: 90px;
+  margin-top: 50px;
 }
 .nav__list {
   list-style: none;
@@ -599,7 +610,7 @@ body {
 .flexbox-price {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 80px;
 }
 
@@ -643,9 +654,12 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .flexbox-price {
+    margin-top: 0;
+  }
   .table-box {
     max-width: 339px;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .button--price-list {
     display: block;
@@ -732,21 +746,6 @@ body {
   flex: 0 0 100%;
 }
 
-@media screen and (max-width: 700px) {
-  .form {
-    flex-wrap: wrap;
-    max-width: 350px;
-    margin-top: 90px;
-    margin-bottom: 30px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .form {
-    max-width: 400px;
-  }
-}
 /* Modal window */
 /* The Modal (background) */
 .modal {
@@ -766,7 +765,7 @@ body {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 20% auto; /* 15% from the top and centered */
+  margin: 50% auto; /* 50% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
@@ -787,10 +786,24 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 700px) {
+  .form {
+    flex-wrap: wrap;
+    max-width: 350px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .form {
+    max-width: 400px;
+  }
+}
 .contact-flex {
   display: flex;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin: 50px 0 80px 0;
   justify-content: center;
 }
 
@@ -844,7 +857,7 @@ body {
   justify-content: center;
   gap: 30px;
   padding: 0 20px;
-  margin-top: 90px;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 

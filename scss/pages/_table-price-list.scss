@@ -2,7 +2,7 @@
 .flexbox-price {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 80px;
 }
 .photo-price__image {
@@ -44,9 +44,12 @@
 }
 
 @media screen and (max-width: 700px) {
+  .flexbox-price {
+    margin-top: 0;
+  }
   .table-box {
     max-width: 339px;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .button--price-list {
     display: block;
