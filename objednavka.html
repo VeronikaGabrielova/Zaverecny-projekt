@@ -4,8 +4,12 @@ title: Objednávka
 ---
 
 <div class="centering">
-  <form class="form" method="post" action="https://submit-form.com/g6LcefhK
-">
+  <form
+    class="form"
+    method="post"
+    action="https://submit-form.com/g6LcefhK
+"
+  >
     <div class="form-flex">
       <fieldset class="form-fieldset">
         <legend>Osobní údaje</legend>
@@ -21,7 +25,7 @@ title: Objednávka
             id="jmeno"
             autofocus
             required
-/>
+          />
         </div>
         <div class="form-field">
           <label class="form-field__label" for="prijmeni">
@@ -33,7 +37,7 @@ title: Objednávka
             name="prijmeni"
             id="prijmeni"
             required
-/>
+          />
         </div>
 
         <div class="form-field">
@@ -47,7 +51,7 @@ title: Objednávka
             id="email"
             value="@"
             required
-/>
+          />
         </div>
         <div class="form-field">
           <label class="form-field__label" for="telefon">
@@ -60,7 +64,7 @@ title: Objednávka
             id="telefon"
             value="+420"
             required
-/>
+          />
         </div>
       </fieldset>
 
@@ -144,7 +148,7 @@ title: Objednávka
             id="souhlas"
             value="ano"
             reguired
-/>
+          />
           <label for="souhlas"
             >Souhlasím se zpracováním osobních údajů
             <span class="required">*</span></label
@@ -158,12 +162,52 @@ title: Objednávka
             id="podminky"
             value="ano"
             required
-/>
+          />
           <label for="podminky"
             >Souhlasím s obchodními podmínkami <span class="required">*</span>
           </label>
         </div>
-        <button class="form-button" type="submit">Nezávazně objednat</button>
+        <button class="form-button" id="myBtn" type="submit">
+          Nezávazně objednat
+        </button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Děkujeme.</p>
+            <p>Vaše objednávka byla vytvořena.</p>
+            <p>Brzy se vám ozveme na uvedený e–mail.</p>
+          </div>
+        </div>
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks the button, open the modal
+          btn.onclick = function () {
+            modal.style.display = "block";
+          };
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          };
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+        </script>
       </fieldset>
     </div>
   </form>

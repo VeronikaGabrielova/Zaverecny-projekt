@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Zakázkové pečení dortů | Objednávka</title>
+    <title>Zakázkové pečení | Objednávka</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -79,8 +79,12 @@
 
         
 <div class="centering">
-  <form class="form" method="post" action="https://submit-form.com/g6LcefhK
-">
+  <form
+    class="form"
+    method="post"
+    action="https://submit-form.com/g6LcefhK
+"
+  >
     <div class="form-flex">
       <fieldset class="form-fieldset">
         <legend>Osobní údaje</legend>
@@ -96,7 +100,7 @@
             id="jmeno"
             autofocus
             required
-/>
+          />
         </div>
         <div class="form-field">
           <label class="form-field__label" for="prijmeni">
@@ -108,7 +112,7 @@
             name="prijmeni"
             id="prijmeni"
             required
-/>
+          />
         </div>
 
         <div class="form-field">
@@ -122,7 +126,7 @@
             id="email"
             value="@"
             required
-/>
+          />
         </div>
         <div class="form-field">
           <label class="form-field__label" for="telefon">
@@ -135,7 +139,7 @@
             id="telefon"
             value="+420"
             required
-/>
+          />
         </div>
       </fieldset>
 
@@ -219,7 +223,7 @@
             id="souhlas"
             value="ano"
             reguired
-/>
+          />
           <label for="souhlas"
             >Souhlasím se zpracováním osobních údajů
             <span class="required">*</span></label
@@ -233,16 +237,57 @@
             id="podminky"
             value="ano"
             required
-/>
+          />
           <label for="podminky"
             >Souhlasím s obchodními podmínkami <span class="required">*</span>
           </label>
         </div>
-        <button class="form-button" type="submit">Nezávazně objednat</button>
+        <button class="form-button" id="myBtn" type="submit">
+          Nezávazně objednat
+        </button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Děkujeme.</p>
+            <p>Vaše objednávka byla vytvořena.</p>
+            <p>Brzy se vám ozveme na uvedený e–mail.</p>
+          </div>
+        </div>
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks the button, open the modal
+          btn.onclick = function () {
+            modal.style.display = "block";
+          };
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          };
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+        </script>
       </fieldset>
     </div>
   </form>
 </div>
+
 
         <footer>
           <div class="footer">
