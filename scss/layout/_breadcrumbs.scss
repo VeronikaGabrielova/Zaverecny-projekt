@@ -1,10 +1,9 @@
 @use "../abstracts/variables";
 
 .nav {
-  margin-top: 50px;
   &__list {
     list-style: none;
-    padding-left: 20px;
+    padding-left: 0;
   }
   &__item + &__item:before {
     content: "/\00a0";
@@ -27,8 +26,5 @@
 @media screen and (min-width: 700px) {
   .nav {
     margin-top: 30px;
-    &__list {
-      padding-left: 25px;
-    }
   }
 }

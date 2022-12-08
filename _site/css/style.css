@@ -100,7 +100,7 @@
     border-bottom: 0;
   }
   .menu__link {
-    padding: 15px 20px;
+    padding: 15px 18px;
   }
   .menu__link:hover {
     background-color: #ec7040;
@@ -150,7 +150,7 @@ body {
 }
 
 .hero {
-  height: 270px;
+  height: 280px;
   background-image: url(/images/header.jpeg);
   background-size: cover;
   background-position: center;
@@ -191,7 +191,7 @@ body {
 }
 .button {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 .button__link {
   padding: 10px 30px;
@@ -245,7 +245,6 @@ body {
 
 @media screen and (min-width: 700px) {
   .flexbox {
-    display: flex;
     justify-content: center;
     padding: 80px 30px;
   }
@@ -495,12 +494,9 @@ body {
     margin-top: 80px;
   }
 }
-.nav {
-  margin-top: 50px;
-}
 .nav__list {
   list-style: none;
-  padding-left: 20px;
+  padding-left: 0;
 }
 .nav__item + .nav__item:before {
   content: "/ ";
@@ -521,9 +517,6 @@ body {
 @media screen and (min-width: 700px) {
   .nav {
     margin-top: 30px;
-  }
-  .nav__list {
-    padding-left: 25px;
   }
 }
 .navigation {
@@ -569,12 +562,18 @@ body {
   width: 100%;
   height: auto;
 }
+.nav-gallery--child {
+  grid-column: 1;
+}
 
 @media screen and (min-width: 700px) {
   .navigation {
     margin-bottom: 80px;
     gap: 30px;
     grid-template-columns: repeat(4, minmax(100px, 200px));
+  }
+  .nav-gallery--child {
+    grid-column: 1;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -594,9 +593,14 @@ body {
   border-radius: 5px;
 }
 
+.grid-gallery__image:hover {
+  width: 101%;
+}
+
 .gallery-header {
+  grid-column: 1/-1;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 40px;
   text-transform: uppercase;
   color: #d1345b;
@@ -804,7 +808,7 @@ body {
 .contact-flex {
   display: flex;
   margin: 50px 0 80px 0;
-  justify-content: center;
+  justify-content: right;
 }
 
 .contact__list {
@@ -871,6 +875,7 @@ body {
   padding: 2px 20px;
 }
 .card__image {
+  height: auto;
   width: 100%;
   display: block;
   border-radius: 5px 5px 0 0;
@@ -902,5 +907,78 @@ body {
   }
   .card__title {
     font-size: 20px;
+  }
+}
+.secondary-header {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #d1345b;
+}
+
+.flexbox-omne {
+  padding: 20px;
+}
+
+.omne {
+  text-align: center;
+}
+
+.omne__image {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.text__omne {
+  text-align: justify;
+}
+
+.secondary-header--margin {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .flexbox-omne {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    padding-top: 0;
+  }
+  .omne__image {
+    flex: 1 0 40%;
+    min-height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .text__omne {
+    flex: 1 0 60%;
+    padding-right: 20px;
+  }
+  .flexbox-omne--reverse {
+    flex-direction: row-reverse;
+  }
+  .text__omne--left-padding {
+    padding-left: 20px;
+  }
+  .secondary-header--margin {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .flexbox-omne {
+    padding: 0;
+  }
+  .omne__image {
+    flex: 1 0 400px;
+    max-height: 300px;
+  }
+  .text__omne {
+    flex: 0 0 550px;
+    padding-right: 30px;
+  }
+  .text__omne--left-padding {
+    padding-left: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

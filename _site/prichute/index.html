@@ -11,13 +11,22 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
       rel="stylesheet"
 />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/css/style.css"/>
   </head>
 
   <body>
     <!-----------------Menu hlavičky-------------------->
-    <div class="page">
-      <main>
+    <main>
+      <div class="page">
         <header class="header">
           <nav class="menu">
 
@@ -25,11 +34,16 @@
             <div class="toggler">
               <label for="menu-checkbox" class="menu__toggler">☰</label>
 
-              
             </div>
             <ul class="menu__list">
               <li class="menu__item ">
                 <a class="menu__link " href="/">Úvod</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item ">
+                <a class="menu__link " href="/omne/">O mně</a>
               </li>
             </ul>
 
@@ -67,11 +81,11 @@
           <!-----------------Pozadí v hlaviččce-------------------->
           <div class="hero">
             <a class="header-link" href="/">
-            <div class="hero__text">
-              <p class="hero__small-title">Sladké & čerstvé</p>
-              <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
-              <p class="hero__small-title">Pro každou příležitost</p>
-            </div>
+              <div class="hero__text">
+                <p class="hero__small-title">Sladké & čerstvé</p>
+                <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
+                <p class="hero__small-title">Pro každou příležitost</p>
+              </div>
             </a>
             <div class="button">
               <a class="button__link button--behave" href="/galerie/">Galerie</a>
@@ -82,24 +96,25 @@
         
 <section>
   <div class="centering">
+    <h2 class="secondary-header">Příchutě</h2>
     <div class="flavors">
       <div class="card">
         <img
           class="card__image"
           src="/images/flavors/korpusy.jpg"
           alt="Obrázek korpusu"
-/>
+        />
 
         <h2 class="card__title">Korpusy</h2>
         <div class="card__container">
           <ul class="card__list">
-            <li>vanilkový</li>
-            <li>ořechový</li>
             <li>jahodový</li>
             <li>kakaový</li>
+            <li>ořechový</li>
             <li>red velvet</li>
             <li>sachr</li>
             <li>vanilkovo-kakaový</li>
+            <li>vanilkový</li>
           </ul>
         </div>
       </div>
@@ -109,18 +124,18 @@
           class="card__image"
           src="/images/flavors/kremy.jpg"
           alt="Obrázek korpusu"
-/>
+        />
 
         <h2 class="card__title">Krémy</h2>
         <div class="card__container">
           <ul class="card__list">
-            <li>šlehačkový</li>
+            <li>karamel</li>
+            <li>ledové kaštany</li>
+            <li>lotus</li>
             <li>mascarpone</li>
             <li>pařížský</li>
-            <li>ledové kaštany</li>
             <li>pistáciový</li>
-            <li>lotus</li>
-            <li>karamel</li>
+            <li>šlehačkový</li>
           </ul>
         </div>
       </div>
@@ -130,18 +145,18 @@
           class="card__image"
           src="/images/flavors/ovoce.jpg"
           alt="Obrázek korpusu"
-/>
+        />
 
         <h2 class="card__title">Ovoce</h2>
         <div class="card__container">
           <ul class="card__list">
-            <li>maliny</li>
+            <li>banány</li>
             <li>borůvky</li>
             <li>jahody</li>
-            <li>banány</li>
+            <li>maliny</li>
+            <li>mandarinky</li>
             <li>marmelády</li>
             <li>ovocné džemy</li>
-            <li>mandarinky</li>
           </ul>
         </div>
       </div>
@@ -151,22 +166,23 @@
           class="card__image"
           src="/images/flavors/hotove.jpg"
           alt="Obrázek korpusu"
-/>
+        />
 
         <h2 class="card__title">Hotové dorty</h2>
         <div class="card__container">
           <ul class="card__list">
-            <li>Pavlova</li>
             <li>Cheesecake</li>
-            <li>Míša</li>
-            <li>Sacher</li>
             <li>Medovník</li>
+            <li>Míša</li>
+            <li>Pavlova</li>
+            <li>Sacher</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
         <footer>
           <div class="footer">
@@ -177,10 +193,11 @@
               >unsplash.com ,</a
             >
               <a class="footer__link" href="https://freepik.com">freepik.com</a>
+
             </p>
           </div>
         </footer>
-      </main>
-    </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,0 +1,65 @@
+@use "../abstracts/variables";
+
+.flexbox-omne {
+  padding: 20px;
+}
+.omne {
+  text-align: center;
+}
+.omne__image {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.text__omne {
+  text-align: justify;
+}
+
+.secondary-header--margin {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .flexbox-omne {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    padding-top: 0;
+  }
+  .omne__image {
+    flex: 1 0 40%;
+    min-height: 400px;
+    object-fit: cover;
+  }
+  .text__omne {
+    flex: 1 0 60%;
+    padding-right: 20px;
+  }
+  .flexbox-omne--reverse {
+    flex-direction: row-reverse;
+  }
+  .text__omne--left-padding {
+    padding-left: 20px;
+  }
+  .secondary-header--margin {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .flexbox-omne {
+    padding: 0;
+  }
+  .omne__image {
+    flex: 1 0 400px;
+    max-height: 300px;
+  }
+  .text__omne {
+    flex: 0 0 550px;
+    padding-right: 30px;
+    &--left-padding {
+      padding-left: 30px;
+    }
+  }
+}

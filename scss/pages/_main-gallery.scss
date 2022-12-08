@@ -11,9 +11,13 @@
   width: 100%;
   border-radius: 5px;
 }
+.grid-gallery__image:hover {
+  width: 101%;
+}
 .gallery-header {
+  grid-column: 1/-1;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 40px;
   text-transform: uppercase;
   color: variables.$ck-primary;
@@ -23,3 +27,4 @@
   margin: 0 auto;
   max-width: 1100px;
 }
+

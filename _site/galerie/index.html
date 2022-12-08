@@ -11,13 +11,22 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
       rel="stylesheet"
 />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/css/style.css"/>
   </head>
 
   <body>
     <!-----------------Menu hlavičky-------------------->
-    <div class="page">
-      <main>
+    <main>
+      <div class="page">
         <header class="header">
           <nav class="menu">
 
@@ -25,11 +34,16 @@
             <div class="toggler">
               <label for="menu-checkbox" class="menu__toggler">☰</label>
 
-              
             </div>
             <ul class="menu__list">
               <li class="menu__item ">
                 <a class="menu__link " href="/">Úvod</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item ">
+                <a class="menu__link " href="/omne/">O mně</a>
               </li>
             </ul>
 
@@ -67,11 +81,11 @@
           <!-----------------Pozadí v hlaviččce-------------------->
           <div class="hero">
             <a class="header-link" href="/">
-            <div class="hero__text">
-              <p class="hero__small-title">Sladké & čerstvé</p>
-              <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
-              <p class="hero__small-title">Pro každou příležitost</p>
-            </div>
+              <div class="hero__text">
+                <p class="hero__small-title">Sladké & čerstvé</p>
+                <h1 class="hero__main-title">Zakázkové pečení dortů</h1>
+                <p class="hero__small-title">Pro každou příležitost</p>
+              </div>
             </a>
             <div class="button">
               <a class="button__link button--behave" href="/galerie/">Galerie</a>
@@ -79,72 +93,69 @@
           </div>
         </header>
 
-        <section>
-<div class="centering">
-<nav class="nav">
-  <ul class="nav__list">
-    <li class="nav__item"><a class="nav__link" href="/">Úvod</a></li>
-    <li class="nav__item">Galerie</li>
-  </ul>
-</nav>
-
-<nav class="navigation">
-  <div class="nav-gallery">
-     <img
+        
+<section>
+  <div class="centering">
+    <nav class="navigation">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="/">Úvod</a></li>
+          <li class="nav__item">Galerie</li>
+        </ul>
+      </nav>
+      <div class="nav-gallery nav-gallery--child">
+        <img
           class="nav-gallery__image"
           src="/images/child/detske.jpg"
           alt="fotografie dětského dortu"
-          
         />
-    <div class="nav-gallery__description">
-      <a class="nav-gallery__link" href="/galerie/detske/">Dětské dorty 
-      </a> 
+        <div class="nav-gallery__description">
+          <a class="nav-gallery__link" href="/galerie/detske/">Dětské dorty </a>
+        </div>
+      </div>
+
+      <div class="nav-gallery">
+        <img
+          class="nav-gallery__image"
+          src="/images/wedding/svatebni.jpg"
+          alt="fotografie svatebního dortu"
+        />
+        <div class="nav-gallery__description">
+          <a class="nav-gallery__link" href="/galerie/svatebni/">
+            Svatební dorty
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-gallery">
+        <img
+          class="nav-gallery__image"
+          src="/images/fruity/ovoce.jpg"
+          alt="fotografie ovocných a čokoládových dortů"
+        />
+        <div class="nav-gallery__description">
+          <a class="nav-gallery__link" href="/galerie/ovocne/">
+            Ovocné dorty
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-gallery">
+        <img
+          class="nav-gallery__image"
+          src="/images/choco/coko2.jpg"
+          alt="fotografie ovocných a čokoládových dortů"
+        />
+        <div class="nav-gallery__description">
+          <a class="nav-gallery__link" href="/galerie/cokoladove/">
+            Čokoládové dorty
+          </a>
+        </div>
+      </div>
+    </nav>
   </div>
-  </div>
-
-
-  <div class="nav-gallery">
-    <img
-      class="nav-gallery__image"
-      src="/images/wedding/svatebni.jpg"
-      alt="fotografie svatebního dortu"
-    />
-    <div class="nav-gallery__description">
-  <a class="nav-gallery__link" href="/galerie/svatebni/">
-    Svatební dorty
-  </a>
-</div>
-</div>
-
-
-<div class="nav-gallery">
-   <img
-      class="nav-gallery__image"
-      src="/images/fruity/ovoce.jpg"
-      alt="fotografie ovocných a čokoládových dortů"
-    /> 
-    <div class="nav-gallery__description">
-  <a class="nav-gallery__link" href="/galerie/ovocne/">
-    Ovocné dorty
-  </a>
-  </div>
-</div>
-
-<div class="nav-gallery">
-    <img
-       class="nav-gallery__image"
-       src="/images/choco/coko2.jpg"
-       alt="fotografie ovocných a čokoládových dortů"
-     /> 
-     <div class="nav-gallery__description">
-   <a class="nav-gallery__link" href="/galerie/cokoladove/">
-     Čokoládové dorty
-   </a>
-   </div>
- </div>
-</nav>
-</div>
 </section>
+
 
         <footer>
           <div class="footer">
@@ -155,10 +166,11 @@
               >unsplash.com ,</a
             >
               <a class="footer__link" href="https://freepik.com">freepik.com</a>
+
             </p>
           </div>
         </footer>
-      </main>
-    </div>
+      </div>
+    </main>
   </body>
 </html>
