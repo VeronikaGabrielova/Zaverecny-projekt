@@ -5,7 +5,7 @@
 @use "components/button";
 @use "components/flex-cook";
 @use "components/background-present";
-@use "components/hero-grid";
+@use "components/hero-grid-intro";
 @use "layout/footer";
 @use "layout/breadcrumbs";
 @use "layout/nav-gallery";
@@ -14,5 +14,5 @@
 @use "layout/form";
 @use "pages/contact";
 @use "pages/flavors";
-@use "components/secondary-header";
-@use "pages/omne";
+@use "components/secondary-heading";
+@use "pages/about";

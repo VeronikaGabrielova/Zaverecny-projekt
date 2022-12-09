@@ -1,6 +1,8 @@
 @use "../abstracts/variables";
 
-
+.button--display {
+  display: none;
+}
 .button {
 text-align: center;
 margin-top: 15px;
@@ -20,8 +22,12 @@ margin-top: 15px;
 }
 
 @media screen and(min-width: 700px) {
+  .button--display {
+    display: inline-block;
+  }
   .button {
     margin-top: 55px;
+
     &__link {
       padding: 15px 70px;
       font-size: 17px;
