@@ -2,7 +2,7 @@
 
 .contact-flex {
   display: flex;
-  margin: 0 0 80px 0;
+  margin: 40px 0 80px 0;
   justify-content: right;
 }
 
@@ -45,6 +45,7 @@
   .contact-flex {
     display: block;
     text-align: center;
+    margin-top: 0;
     padding: 30px 10px 10px 10px;
   }
   .contact-map__image {

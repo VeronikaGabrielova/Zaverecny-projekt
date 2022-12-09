@@ -18,7 +18,6 @@
   width: 40px;
   height: 40px;
   background-color: rgba(236, 112, 64, 0.7);
-  background-position: center;
   border-radius: 50%;
   font-size: 23px;
   text-align: center;
@@ -813,7 +812,7 @@ body {
 }
 .contact-flex {
   display: flex;
-  margin: 0 0 80px 0;
+  margin: 40px 0 80px 0;
   justify-content: right;
 }
 
@@ -852,6 +851,7 @@ body {
   .contact-flex {
     display: block;
     text-align: center;
+    margin-top: 0;
     padding: 30px 10px 10px 10px;
   }
   .contact-map__image {
@@ -917,7 +917,7 @@ body {
 }
 .secondary-header {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #d1345b;
