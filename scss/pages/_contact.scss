@@ -26,10 +26,8 @@
   }
 }
 .contact-map {
-  &__image {
-    position: relative;
-    z-index: -1;
-  }
+   position: relative;
+  z-index: -9999;
 }
 
 .contact-right {
