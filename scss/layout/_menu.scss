@@ -1,13 +1,14 @@
 @use "../abstracts/variables";
 
 .menu {
+  padding: 5px;
   z-index: 1;
   position: absolute;
   right: 0;
   left: 0;
   top: 0;
   text-align: right;
- 
+
   &__checkbox {
     position: absolute;
     left: -9999px;
@@ -40,7 +41,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: rgb(238, 197, 217,);
+    background-color: rgb(238, 197, 217);
   }
   &__item {
     border-bottom: 1px solid white;
@@ -62,7 +63,7 @@
 
 .toggler {
   display: flex;
-  justify-content: end; 
+  justify-content: end;
 }
 .menu__item--active {
   background-color: rgb(236, 112, 64, 0.5);
@@ -75,7 +76,7 @@
 .menu__title-link {
   text-decoration: none;
 }
-@media screen and (max-width: 699px){
+@media screen and (max-width: 699px) {
   .menu__checkbox:checked ~ .menu__list {
     display: block; /*specificita*/
   }
@@ -83,7 +84,6 @@
 
 @media screen and (min-width: 700px) {
   .menu {
-    padding: 0;
     text-align: center;
     background-color: #ffff;
     &__toggler {
