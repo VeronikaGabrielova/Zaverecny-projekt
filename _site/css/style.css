@@ -2,6 +2,7 @@
 /* Barvy stránky*/
 /* Písmo stránky */
 .menu {
+  padding: 5px;
   z-index: 1;
   position: absolute;
   right: 0;
@@ -85,7 +86,6 @@
 }
 @media screen and (min-width: 700px) {
   .menu {
-    padding: 0;
     text-align: center;
     background-color: white;
   }
@@ -803,6 +803,7 @@ body {
     text-align: center;
     margin-top: 0;
     padding: 30px 10px 10px 10px;
+    min-height: 70vh;
   }
   .contact-map__image {
     min-width: 300px;
